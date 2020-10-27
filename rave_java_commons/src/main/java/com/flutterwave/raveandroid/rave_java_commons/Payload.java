@@ -80,6 +80,8 @@ public class Payload
 
     private String bvn;
 
+    private boolean is_visa;
+
     public void setRemember_device_mobile_key(String remember_device_mobile_key) {
         this.remember_device_mobile_key = remember_device_mobile_key;
     }
@@ -345,6 +347,14 @@ public class Payload
 
     public void setCharge_type(String charge_type){
         this.charge_type = charge_type;
+    }
+
+    public boolean getIs_visa() {
+        return is_visa;
+    }
+
+    public void setIs_visa(boolean is_visa){
+        this.is_visa = is_visa;
     }
 
     public void setToken(String token) {

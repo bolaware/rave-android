@@ -409,6 +409,10 @@ public class PayloadBuilder {
             payload.setCharge_type("preauth");
         }
 
+        if(savedCard.getCard_brand().equalsIgnoreCase("visa") || savedCard.getCard_brand().equalsIgnoreCase("mastercard")){
+            payload.setIs_visa(true);
+        }
+
         payload.setCardBIN(savedCard.getMasked_pan().substring(0, 6));
         payload.setCard_hash(savedCard.getCardHash());
         payload.setDevice_key(phonenumber);
